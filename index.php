@@ -10,10 +10,16 @@
 <body>
   
 <form action="paragraph.php" method="GET">
-  <label for="story">Scrivi una storia</label>
-  <textarea type="text" name="paragraph" id="story"></textarea>
-  <label for="censured">Scrivi una parola da censurare</label>
-  <input type="text" name="word" id="censured">
+  <div>
+    <label for="story">Scrivi una storia</label>
+    <textarea type="text" name="paragraph" id="story"></textarea>
+  </div>
+ 
+  <div>
+    <label for="censured">Scrivi una parola da censurare</label>
+    <input type="text" name="word" id="censured">
+  </div>
+  
   <button>Send</button>
 </form>
 

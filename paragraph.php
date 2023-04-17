@@ -1,6 +1,7 @@
 <?php
   $text= $_GET['paragraph'];
   $word = $_GET['word'];
+  $censured = '***';
 ?>
 
 
@@ -18,14 +19,12 @@
 
   <p><?php echo $text; ?></p>
 
-  <?php echo 'Il testo è lungo: ' . strlen($text); ?>
+  <div><?php echo 'Il testo è lungo: ' . strlen($text); ?></div>
 
-  <p><?php echo $text; ?></p>
+  <p><?php $newText = str_replace($word, $censured, $text); 
+  echo $newText; ?></p>
 
-  <?php 
-  $censured = '***';
-  $word = str_replace($censured);
-  ?>
+  <div><?php echo 'Il testo censurato è lungo: ' . strlen($newText); ?></div>
 
 </body>
 
